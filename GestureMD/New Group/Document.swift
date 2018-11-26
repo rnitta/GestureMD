@@ -16,4 +16,7 @@ class Document: Object {
     @objc dynamic var createdAt = NSDate()
     @objc dynamic var updatedAt = NSData()
     
+    override static func primaryKey() -> String? {
+        return "id"
+    }
 }

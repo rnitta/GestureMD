@@ -15,6 +15,7 @@
 		87C4646D21A98B95000C639C /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C4646C21A98B95000C639C /* Document.swift */; };
 		87C4647121A98BDC000C639C /* DocumentsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C4647021A98BDC000C639C /* DocumentsTableViewController.swift */; };
 		87C4647421A9B14D000C639C /* UITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C4647321A9B14D000C639C /* UITableViewCell.swift */; };
+		87C4647821AB13B9000C639C /* DocumentsRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C4647721AB13B9000C639C /* DocumentsRootViewController.swift */; };
 		BCE3CF9436D36DB1B3D145D3 /* Pods_GestureMD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B14A5B5E039A5FACA5BB780 /* Pods_GestureMD.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		87C4646C21A98B95000C639C /* Document.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
 		87C4647021A98BDC000C639C /* DocumentsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentsTableViewController.swift; sourceTree = "<group>"; };
 		87C4647321A9B14D000C639C /* UITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCell.swift; sourceTree = "<group>"; };
+		87C4647721AB13B9000C639C /* DocumentsRootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentsRootViewController.swift; sourceTree = "<group>"; };
 		8D72E9E3A425CCC288DD81A1 /* Pods-GestureMD.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GestureMD.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GestureMD/Pods-GestureMD.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -110,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				87C4647021A98BDC000C639C /* DocumentsTableViewController.swift */,
+				87C4647721AB13B9000C639C /* DocumentsRootViewController.swift */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -249,6 +252,7 @@
 				87C4645821A97F6F000C639C /* AppDelegate.swift in Sources */,
 				87C4646D21A98B95000C639C /* Document.swift in Sources */,
 				87C4647121A98BDC000C639C /* DocumentsTableViewController.swift in Sources */,
+				87C4647821AB13B9000C639C /* DocumentsRootViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

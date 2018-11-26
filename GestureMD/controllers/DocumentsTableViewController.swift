@@ -14,7 +14,15 @@ class DocumentsTableViewController: UIViewController, UITableViewDataSource, UIT
     let realm = try! Realm()
     var documents: Results<Document>?
     @IBOutlet var documentsListTable: UITableView!
-    @IBAction func addButtonPushed(_ sender: UIBarButtonItem) {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        documents = realm.objects(Document.self)
+    }
+    
+    // FIXME: 移譲する
+    func addDocument() {
         // 新しいレコード
         let newDoc = Document()
         newDoc.title = "test"
@@ -24,12 +32,6 @@ class DocumentsTableViewController: UIViewController, UITableViewDataSource, UIT
         }
         // テーブルリロード
         documentsListTable.reloadData()
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        documents = realm.objects(Document.self)
     }
 
     // セル数
@@ -51,7 +53,7 @@ class DocumentsTableViewController: UIViewController, UITableViewDataSource, UIT
         if editingStyle == .delete {
             let cell: uuidSettableCell = documentsListTable.dequeueReusableCell(withIdentifier: "DocumentsListCell")! as! uuidSettableCell
             // idで検索してオブジェクトを取得
-            if let document = realm.objects(Document.self).filter("id == %@", cell.uuid?.uuidString as Any).first {
+            if let document = realm.object(ofType: Document.self, forPrimaryKey: cell.uuid?.uuidString) {
                 try! realm.write() {
                     realm.delete(document)
                 }
